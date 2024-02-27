@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es2019",
+    "target": "ES2019",
     "useDefineForClassFields": true,
-    "lib": ["es2019", "DOM", "DOM.Iterable"],
+    "lib": ["ES2019", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
 
@@ -13,7 +13,6 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "checkJs": false,
 
     /* Linting */
     "strict": true,

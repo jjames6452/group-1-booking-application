@@ -24,6 +24,7 @@ export const AppContextProvider = ({
       value={{
         showToast: (toastMessage) => {
           setToast(toastMessage);
+          // console.log(toastMessage);
         },
       }}
     >

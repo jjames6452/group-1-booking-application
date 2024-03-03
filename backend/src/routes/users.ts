@@ -1,60 +1,48 @@
-import express, { Request, Response } from "express";
-import User from "../models/user";
-import jwt from "jsonwebtoken";
-import { check, validationResult } from "express-validator";
+import express, { Request, Response } from "express"; // import express
+import User from "../models/user"; // import User model
+import jwt from "jsonwebtoken"; // import jwt
+import { check, validationResult } from "express-validator"; // import validation middleware
 
+// create router
 const router = express.Router();
 
-// /api/users/register
+// POST /api/users/register
 router.post(
-  "/register",
-  [
-    check("firstName", "First Name is required").isString(),
-    check("lastName", "Last Name is required").isString(),
-    check("email", "Email is required").isEmail(),
-    check("password", "Password with 6 more characters required").isLength({
-      min: 6,
-    }),
-  ],
-  async (req: Request, res: Response) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.status(400).json({ message: errors.array() });
-    }
-    try {
-      let user = await User.findOne({
-        email: req.body.email,
-      });
+ "/register", // define route
+ [
+   check("firstName", "First Name required") // validate firstName
+     .isString(),
+   check("lastName", "Last Name required") // validate lastName
+     .isString(),
+   check("email", "Email required") // validate email
+     .isEmail(),
+   check("password", "Password 6+ chars required") // validate password
+     .isLength({ min: 6 }),
+ ],
+ async (req: Request, res: Response) => {
+   const errors = validationResult(req); // get validation errors
+   if (!errors.isEmpty()) {
+     return res.status(400).json({ message: errors.array() });
+   }
+   try {
+     let user = await User.findOne({ email: req.body.email }); // find user by email
+     if (user) {
+       return res.status(400).json({ message: "user already exists" });
+     }
+     user = new User(req.body); // create new user
+     await user.save(); // save user
 
-      if (user) {
-        return res.status(400).json({ message: "user already exists" });
-      }
+     const token = jwt.sign(
+       { userId: user.id }, // create token
+       process.env.JWT_SECRET_KEY as string
+     );
 
-      user = new User(req.body);
-      await user.save();
-
-      const token = jwt.sign(
-        {
-          userId: user.id,
-        },
-        process.env.JWT_SECRET_KEY as string,
-        {
-          expiresIn: "1d",
-        }
-      );
-
-      res.cookie("auth_token", token, {
-        httpOnly: true,
-        secure: process.env.NODE_ENV === "production",
-        maxAge: 86400000,
-      });
-
-      return res.status(200).send({ message: "User registered successfully" });
-    } catch (error) {
-      console.log(error);
-      res.status(500).send({ message: "something went wront" });
-    }
-  }
+     res.status(201).json({ message: "user created", token });
+   } catch (error) {
+     console.error(error);
+     res.status(500).json({ message: "Server error" });
+   }
+ }
 );
 
-export default router;
+export default router; // export router

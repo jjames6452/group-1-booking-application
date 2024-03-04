@@ -7,6 +7,7 @@ import verifyToken from "../middleware/auth";
 
 const router = express.Router();
 
+// input validation
 router.post(
   "/login",
   [
@@ -17,24 +18,31 @@ router.post(
   ],
   async (req: Request, res: Response) => {
     const errors = validationResult(req);
+
+    //check if there's errors
     if (!errors.isEmpty()) {
       return res.status(400).json({ message: errors.array() });
     }
 
+    // get email and password from request body
     const { email, password } = req.body;
 
     try {
+      //check if email exists
       const user = await User.findOne({ email });
       if (!user) {
         return res.status(404).json({ message: "invalid credentials" });
       }
 
+      // validate the password using bcrypt compare method
       const isMatch = await bycrypt.compare(password, user.password);
 
+      // if not match return status 400
       if (!isMatch) {
         return res.status(400).json({ message: "Invalid Credentials!" });
       }
 
+      // create a jwt token for authentication
       const token = jwt.sign(
         { uuserID: user.id },
         process.env.JWT_SECRET_KEY as string,
@@ -43,6 +51,7 @@ router.post(
         }
       );
 
+      // create cookie
       res.cookie("auth_token", token, {
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
@@ -59,6 +68,13 @@ router.post(
 
 router.get("/validate-token", verifyToken, (req: Request, res: Response) => {
   res.status(200).send({ userId: req.userId });
+});
+
+router.post("/logout", (req: Request, res: Response) => {
+  res.cookie("auth_token", "", {
+    expires: new Date(0),
+  });
+  res.send();
 });
 
 export default router;

@@ -1,11 +1,21 @@
 const Hero = () => {
   return (
-    <div className="bg-blue-800 pb-16">
-      <div className="container mx-auto flex flex-col gap-2">
-        <h1 className="text-5xl text-white font-bold">Find your next stay</h1>
-        <p className="text-2xl text-white">
-          Search low prices on hotels for your dream vacations...
+    <div
+      className="bg-gray-900 text-white container h-full"
+      style={{
+        backgroundImage: 'url("https://res.cloudinary.com/drvv53jnw/image/upload/v1709607487/homepage-hero_bjz7t8.jpg")',
+      }}
+    >
+      <div className="py-8">
+        <h1 className="text-4xl font-semibold mb-4">
+          A dream stay for a bucket list trip
+        </h1>
+        <p className="text-lg mb-6">
+          Make it a trip to remember in a holiday home
         </p>
+        <button className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
+          Discover holiday rentals
+        </button>
       </div>
     </div>
   );

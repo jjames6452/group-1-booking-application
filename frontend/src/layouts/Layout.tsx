@@ -9,7 +9,7 @@ interface Props {
 
 const Layout = ({ children }: Props) => {
   return (
-    <div className="flex flex-col h-dvh">
+    <div className="flex flex-col">
       <Header />
       {/* <Hero /> */}
       <HeroBanner/>

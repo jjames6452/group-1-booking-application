@@ -3,7 +3,7 @@ import Layout from "./layouts/Layout";
 import Register from "./pages/Register";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import SignIn from "./pages/SignIn";
-import Offers from "./components/Offers";
+import Homepage from "./pages/Homepage";
 
 const App = () => {
   return (
@@ -13,12 +13,7 @@ const App = () => {
           path="/"
           element={
             <Layout>
-              <Offers
-                title="Fly away to your dream"
-                description="Get inspired, compare and book flights with more flexibility"
-                buttonTxt="Search for flights"
-                imageUrl="https://res.cloudinary.com/drvv53jnw/image/upload/v1709669054/offer_kteeei.jpg"
-              />
+              <Homepage />
             </Layout>
           }
         />

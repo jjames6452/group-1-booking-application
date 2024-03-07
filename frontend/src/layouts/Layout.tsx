@@ -13,7 +13,7 @@ const Layout = ({ children }: Props) => {
       <Header />
       {/* <Hero /> */}
       <HeroBanner/>
-      <div className="container mx-auto py-10 flex-1">{children}</div>
+      <div className="container mx-auto p-4 flex-1">{children}</div>
       <Footer />
     </div>
   );

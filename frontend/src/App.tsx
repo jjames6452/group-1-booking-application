@@ -1,12 +1,9 @@
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Layout from "./layouts/Layout";
 import Register from "./pages/Register";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import SignIn from "./pages/SignIn";
+import Offers from "./components/Offers";
 
 const App = () => {
   return (
@@ -16,7 +13,13 @@ const App = () => {
           path="/"
           element={
             <Layout>
-              <p>Home page</p>
+              {/* <p>Home page</p> */}
+              <Offers
+                title="Fly away to your dream"
+                description="Get inspired, compare and book flights with more flexibility"
+                buttonTxt="Search for flights"
+                imageUrl="https://res.cloudinary.com/drvv53jnw/image/upload/v1709669054/offer_kteeei.jpg"
+              />
             </Layout>
           }
         />

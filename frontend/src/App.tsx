@@ -13,7 +13,6 @@ const App = () => {
           path="/"
           element={
             <Layout>
-              {/* <p>Home page</p> */}
               <Offers
                 title="Fly away to your dream"
                 description="Get inspired, compare and book flights with more flexibility"

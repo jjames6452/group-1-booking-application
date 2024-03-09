@@ -9,7 +9,7 @@ const HeroBanner = () => {
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="text-white p-4">
+        <div className="container px-4 text-white">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 lg:w-2/4">
             A dream stay for a bucket list trip
           </h1>

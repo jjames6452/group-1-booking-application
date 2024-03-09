@@ -4,6 +4,8 @@ import App from "./App.tsx";
 import "./index.css";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { AppContextProvider } from "./contexts/AppContext.tsx";
+import '@fortawesome/fontawesome-free/css/all.css';
+
 
 const queryClient = new QueryClient({
   defaultOptions: {

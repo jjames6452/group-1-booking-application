@@ -3,11 +3,11 @@ export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./index.html"],
   theme: {
     extend: {},
-    container: {
-      padding: {
-        xl: "10rem",
-      },
-    },
+    // container: {
+    //   padding: {
+    //     xl: "10rem",
+    //   },
+    // },
   },
   plugins: [],
 };

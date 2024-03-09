@@ -6,7 +6,7 @@ const Header = () => {
   const { isLoggedIn } = useAppContext();
   return (
     <div className="bg-blue-800 p-4">
-      <div className="container mx-auto flex justify-between">
+      <div className="container flex justify-between mx-auto">
         <span className="text-3xl text-white font-bold tracking-tight">
           <Link to="/">Hotel Booking</Link>
         </span>

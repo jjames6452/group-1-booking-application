@@ -1,5 +1,6 @@
 import Carousel from "../components/Carousel/Carousel";
 import Offers from "../components/Offers";
+import Trend from "../components/Trend";
 
 const Homepage = () => {
   const images = [
@@ -90,94 +91,33 @@ const Homepage = () => {
           Most popular choices for travellers from Canada
         </p>
         <div className="w-full flex flex-wrap flex-col lg:flex-row gap-4 mb-4">
-          <a
-            href=""
-            className="relative flex-1 group overflow-hidden rounded-lg"
-          >
-            <img
-              src="https://res.cloudinary.com/drvv53jnw/image/upload/v1709872567/trend-montreal_witk39.jpg"
-              alt=""
-              className="w-full transition-transform transform group-hover:scale-105"
-            />
-            <div className="flex gap-2 absolute top-0 left-0 p-6 w-full bg-gradient-to-b from-slate-600">
-              <h3 className="text-3xl font-semibold text-white">Montreal</h3>
-              <img
-                src="https://res.cloudinary.com/drvv53jnw/image/upload/v1709872207/canada-flag_r4bxik.png"
-                alt=""
-              />
-            </div>
-          </a>
-
-          <a
-            href=""
-            className="relative flex-1 group overflow-hidden rounded-lg"
-          >
-            <img
-              src="https://res.cloudinary.com/drvv53jnw/image/upload/v1709872567/trend-montreal_witk39.jpg"
-              alt=""
-              className="w-full transition-transform transform group-hover:scale-105"
-            />
-            <div className="flex gap-2 absolute top-0 left-0 p-6 w-full bg-gradient-to-b from-slate-600">
-              <h3 className="text-3xl font-semibold text-white">Montreal</h3>
-              <img
-                src="https://res.cloudinary.com/drvv53jnw/image/upload/v1709872207/canada-flag_r4bxik.png"
-                alt=""
-              />
-            </div>
-          </a>
+          <Trend
+            imageUrl="https://res.cloudinary.com/drvv53jnw/image/upload/v1709872567/trend-montreal_witk39.jpg"
+            title="Montreal"
+            iconUrl="https://res.cloudinary.com/drvv53jnw/image/upload/v1709872207/canada-flag_r4bxik.png"
+          />
+          <Trend
+            imageUrl="https://res.cloudinary.com/drvv53jnw/image/upload/v1709872402/trend-toronto_gy5g5v.jpg"
+            title="Toronto"
+            iconUrl="https://res.cloudinary.com/drvv53jnw/image/upload/v1709872207/canada-flag_r4bxik.png"
+          />
         </div>
         <div className="w-full flex flex-wrap flex-col lg:flex-row gap-4">
-          <a
-            href=""
-            className="relative flex-1 group overflow-hidden rounded-lg"
-          >
-            <img
-              src="https://res.cloudinary.com/drvv53jnw/image/upload/v1709872567/trend-montreal_witk39.jpg"
-              alt=""
-              className="w-full transition-transform transform group-hover:scale-105"
-            />
-            <div className="flex gap-2 absolute top-0 left-0 p-6 w-full bg-gradient-to-b from-slate-600">
-              <h3 className="text-3xl font-semibold text-white">Montreal</h3>
-              <img
-                src="https://res.cloudinary.com/drvv53jnw/image/upload/v1709872207/canada-flag_r4bxik.png"
-                alt=""
-              />
-            </div>
-          </a>
-          <a
-            href=""
-            className="relative flex-1 group overflow-hidden rounded-lg"
-          >
-            <img
-              src="https://res.cloudinary.com/drvv53jnw/image/upload/v1709872567/trend-montreal_witk39.jpg"
-              alt=""
-              className="w-full transition-transform transform group-hover:scale-105"
-            />
-            <div className="flex gap-2 absolute top-0 left-0 p-6 w-full bg-gradient-to-b from-slate-600">
-              <h3 className="text-3xl font-semibold text-white">Montreal</h3>
-              <img
-                src="https://res.cloudinary.com/drvv53jnw/image/upload/v1709872207/canada-flag_r4bxik.png"
-                alt=""
-              />
-            </div>
-          </a>
-          <a
-            href=""
-            className="relative flex-1 group overflow-hidden rounded-lg"
-          >
-            <img
-              src="https://res.cloudinary.com/drvv53jnw/image/upload/v1709872567/trend-montreal_witk39.jpg"
-              alt=""
-              className="w-full transition-transform transform group-hover:scale-105"
-            />
-            <div className="flex gap-2 absolute top-0 left-0 p-6 w-full bg-gradient-to-b from-slate-600">
-              <h3 className="text-3xl font-semibold text-white">Montreal</h3>
-              <img
-                src="https://res.cloudinary.com/drvv53jnw/image/upload/v1709872207/canada-flag_r4bxik.png"
-                alt=""
-              />
-            </div>
-          </a>
+          <Trend
+            imageUrl="https://res.cloudinary.com/drvv53jnw/image/upload/v1709872401/trend-quebec_hilpjn.jpg"
+            title="Quebec City"
+            iconUrl="https://res.cloudinary.com/drvv53jnw/image/upload/v1709872207/canada-flag_r4bxik.png"
+          />
+          <Trend
+            imageUrl="https://res.cloudinary.com/drvv53jnw/image/upload/v1709872401/trend-niagara_kiibhp.jpg"
+            title="Niagara Falls"
+            iconUrl="https://res.cloudinary.com/drvv53jnw/image/upload/v1709872207/canada-flag_r4bxik.png"
+          />
+          <Trend
+            imageUrl="https://res.cloudinary.com/drvv53jnw/image/upload/v1709872402/trend-calgary_yn56mi.jpg"
+            title="Calgary"
+            iconUrl="https://res.cloudinary.com/drvv53jnw/image/upload/v1709872207/canada-flag_r4bxik.png"
+          />
         </div>
       </div>
     </>

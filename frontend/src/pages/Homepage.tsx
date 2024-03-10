@@ -120,6 +120,34 @@ const Homepage = () => {
           />
         </div>
       </div>
+      <div className="container mx-auto flex gap-6 shadow-2xl py-6 px-6 rounded-lg mb-10">
+        <div className=" w-1/4">
+          <img
+            src="https://res.cloudinary.com/drvv53jnw/image/upload/v1710046598/hotel-discount_lq0ona.jpg"
+            className=""
+          />
+          <span className="text-xs">
+            <a href="http://www.freepik.com">
+              Designed by vectorjuice / Freepik
+            </a>
+          </span>
+        </div>
+        <div>
+          <h3 className="font-bold mb-4 text-xl">Get instant discounts</h3>
+          <p className="mb-4">
+            Simply sign into your Booking.com account and look for the blue
+            Genius logo to save
+          </p>
+          <div className="flex gap-4">
+            <button className="py-2 px-4 border rounded border-blue-600 text-blue-600 hover:text-white hover:border-white hover:bg-blue-600 font-semibold">
+              Sign in
+            </button>
+            <button className="py-2 px-4 text-blue-600 font-semibold hover:bg-blue-600 hover:text-white rounded">
+              Register
+            </button>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

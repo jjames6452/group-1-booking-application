@@ -56,6 +56,7 @@ const Homepage = () => {
   ];
   return (
     <>
+      {/* Offers Section */}
       <div className="container mx-auto py-10 px-4">
         <h2 className="font-bold text-4xl">Offers</h2>
         <p className="text-base mb-4">
@@ -76,6 +77,8 @@ const Homepage = () => {
           />
         </div>
       </div>
+
+      {/* Explore Canada Section */}
       <div className="bg-slate-300 py-10">
         <div className="container mx-auto">
           <h2 className="font-bold text-4xl pl-4 mb-4">Explore Canada</h2>
@@ -85,6 +88,8 @@ const Homepage = () => {
           <Carousel images={images} />
         </div>
       </div>
+
+      {/* Discount Section */}
       <div className="py-10 container mx-auto">
         <h2 className="font-bold text-4xl pl-4 mb-4">Trending destinations</h2>
         <p className="text-base pl-4 mb-4">

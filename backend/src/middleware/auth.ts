@@ -13,14 +13,17 @@ const verifyToken = (req: Request, res: Response, next: NextFunction) => {
   const token = req.cookies["auth_token"];
 
   if (!token) {
+    console.log("Token not found");
     return res.status(401).json({ message: "Unauthorized" });
   }
 
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY as string);
     req.userId = (decoded as JwtPayload).userId;
+    console.log("Decoded user ID:", req.userId);
     next();
   } catch (error) {
+    console.error("Error decoding token:", error);
     return res.status(401).json({ message: "Unauthorized" });
   }
 };

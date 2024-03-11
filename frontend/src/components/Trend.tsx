@@ -5,7 +5,7 @@ interface TrendProps {
 }
 const Trend: React.FC<TrendProps> = ({ imageUrl, title, iconUrl }) => {
   return (
-    <a href="" className="relative flex-1 group overflow-hidden rounded-lg">
+    <a href="" className="relative md:flex-1 max-h-40 lg:max-h-full group overflow-hidden rounded-lg">
       <img
         src={imageUrl}
         className="w-full transition-transform transform group-hover:scale-105"

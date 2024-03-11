@@ -81,7 +81,7 @@ const Homepage = () => {
 
       {/* Explore Canada Section */}
       <div className="bg-slate-300 py-10">
-        <div className="container mx-auto">
+        <div className="container mx-auto px-4">
           <h2 className="font-bold text-4xl pl-4 mb-4">Explore Canada</h2>
           <p className="text-base pl-4 mb-4">
             These popular destinations have a lot to offer
@@ -90,8 +90,8 @@ const Homepage = () => {
         </div>
       </div>
 
-      {/* Discount Section */}
-      <div className="py-10 container mx-auto">
+      {/* Trending Section */}
+      <div className="py-10 container mx-auto px-4">
         <h2 className="font-bold text-4xl pl-4 mb-4">Trending destinations</h2>
         <p className="text-base pl-4 mb-4">
           Most popular choices for travellers from Canada
@@ -126,13 +126,14 @@ const Homepage = () => {
           />
         </div>
       </div>
+      {/* Discount Section */}
       <div className="container mx-auto flex gap-6 shadow-2xl py-6 px-6 rounded-lg mb-10">
         <div className=" w-1/4">
           <img
             src="https://res.cloudinary.com/drvv53jnw/image/upload/v1710046598/hotel-discount_lq0ona.jpg"
             className=""
           />
-          <span className="text-xs">
+          <span className="text-xs hidden lg:block">
             <a href="http://www.freepik.com">
               Designed by vectorjuice / Freepik
             </a>

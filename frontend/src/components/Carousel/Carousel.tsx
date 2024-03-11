@@ -40,7 +40,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
               <img
                 src={item.image}
                 alt={`Slide ${index + 1}`}
-                className="w-full h-full object-cover rounded-lg"
+                className="w-full lg:h-80 object-cover rounded-lg origin-[50px, -50px]"
               />
               <div>{item.description}</div>
               <div>{item.properties}</div>

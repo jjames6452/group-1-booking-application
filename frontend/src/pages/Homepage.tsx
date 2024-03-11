@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Carousel from "../components/Carousel/Carousel";
 import Offers from "../components/Offers";
 import Trend from "../components/Trend";
@@ -15,14 +16,14 @@ const Homepage = () => {
       place: "Toronto",
       image:
         "https://res.cloudinary.com/drvv53jnw/image/upload/v1709779752/toronto_y6iwpv.jpg",
-      description: "toronto",
+      description: "Toronto",
       properties: "50 properties",
     },
     {
       place: "Quebec",
       image:
         "https://res.cloudinary.com/drvv53jnw/image/upload/v1709779752/quebec_daalcw.jpg",
-      description: "quebec",
+      description: "Quebec",
       properties: "50 properties",
     },
     {
@@ -144,12 +145,18 @@ const Homepage = () => {
             Genius logo to save
           </p>
           <div className="flex gap-4">
-            <button className="py-2 px-4 border rounded border-blue-600 text-blue-600 hover:text-white hover:border-white hover:bg-blue-600 font-semibold">
+            <Link
+              to={"/sign-in"}
+              className="py-2 px-4 border rounded border-blue-600 text-blue-600 hover:text-white hover:border-white hover:bg-blue-600 font-semibold"
+            >
               Sign in
-            </button>
-            <button className="py-2 px-4 text-blue-600 font-semibold hover:bg-blue-600 hover:text-white rounded">
+            </Link>
+            <Link
+              to={"/register"}
+              className="py-2 px-4 text-blue-600 font-semibold hover:bg-blue-600 hover:text-white rounded"
+            >
               Register
-            </button>
+            </Link>
           </div>
         </div>
       </div>

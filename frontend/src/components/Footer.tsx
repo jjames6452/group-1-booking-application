@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
     <div className="bg-blue-800 py-10">
       <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center px-4">
         <div className="text-white font-bold tracking-tight mb-4 lg:mb-0 text-center lg:text-left">
-          <span className="text-3xl">MernHolidays.com</span>
+          <span className="text-3xl">Booker King</span>
         </div>
         <div className="text-white font-bold tracking-tight flex flex-col items-center lg:items-start">
           <p className="mb-2">Follow Us On</p>
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
       </div>
       {/* Copyright information at the bottom */}
       <div className="text-white text-center mt-4">
-        <p>&copy; 2024 MernHolidays.com. All rights reserved.</p>
+        <p>&copy; 2024 Booker King. All rights reserved.</p>
       </div>
     </div>
   );

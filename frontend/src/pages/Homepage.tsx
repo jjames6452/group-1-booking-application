@@ -142,7 +142,7 @@ const Homepage = () => {
         <div>
           <h3 className="font-bold mb-4 text-xl">Get instant discounts</h3>
           <p className="mb-4">
-            Simply sign into your Booking.com account and look for the blue
+            Simply sign into your Booker King account and look for the blue
             Genius logo to save
           </p>
           <div className="flex gap-4">

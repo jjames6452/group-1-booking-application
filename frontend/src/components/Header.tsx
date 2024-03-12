@@ -11,6 +11,12 @@ const Header = () => {
           <Link to="/">Booker King</Link>
         </span>
         <span className="flex space-x-2">
+          <Link
+            to="/register"
+            className="flex bg-white items-center text-blue-600 px-3 font-bold hover:bg-gray-100 rounded"
+          >
+            Register
+          </Link>
           {isLoggedIn ? (
             <>
               <Link

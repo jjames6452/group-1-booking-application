@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Carousel from "../components/Carousel/Carousel";
 import Offers from "../components/Offers";
 import Trend from "../components/Trend";
+import SearchBar from "../components/SearchBar";
 
 const Homepage = () => {
   const images = [

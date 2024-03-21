@@ -1,6 +1,7 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import HeroBanner from "../components/HeroBanner";
+import SearchBar from "../components/SearchBar";
 // import Hero from "../components/Hero";
 
 interface Props {
@@ -11,8 +12,9 @@ const Layout = ({ children }: Props) => {
   return (
     <div className="flex flex-col">
       <Header />
-      {/* <Hero /> */}
       <HeroBanner/>
+      <SearchBar />
+      {/* <Hero /> */}
       <div>{children}</div>
       <Footer />
     </div>
